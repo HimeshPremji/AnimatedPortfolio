@@ -4,6 +4,19 @@ const navLinks = document.querySelector(".nav-links");
 const navbarBg = document.querySelector(".navbar-bg");
 let menuOpen = false;
 
+// window width check if bigger than 768 the navlinks will be displayed
+function checkWindowSize() {
+  if (window.innerWidth > 768) {
+    navLinks.style.display = "flex";
+    navLinks.style.height = "auto";
+    navLinks.style.opacity = 1;
+  }
+}
+
+checkWindowSize();
+
+window.addEventListener("resize", checkWindowSize);
+
 // Hamburger Menu Animation
 hamburger.addEventListener("click", () => {
   menuOpen = !menuOpen;

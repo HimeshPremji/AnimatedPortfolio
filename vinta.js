@@ -1,5 +1,5 @@
 VANTA.FOG({
-  el: ".overlay",
+  el: ".home",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
@@ -9,7 +9,7 @@ VANTA.FOG({
   midtoneColor: 0x565656,
   lowlightColor: 0xa084bb,
   baseColor: 0xffffff,
-  blurFactor: 0.9,
-  speed: 2.5,
+  blurFactor: 0.99,
+  speed: 0.7,
   zoom: 0.6,
 });
