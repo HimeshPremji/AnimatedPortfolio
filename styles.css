@@ -91,8 +91,8 @@ main {
   gap: 1.25rem;
   list-style: none;
   margin: 0;
+  overflow: hidden;
   padding: 0;
-  transition: transform 0.3s ease-in-out;
 }
 
 .nav-links li a {
@@ -105,7 +105,7 @@ main {
   display: block;
 }
 
-.resume:hover { 
+.resume:hover {
   background: #3d3d3d;
 }
 
