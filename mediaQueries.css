@@ -1,0 +1,57 @@
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+    width: 95%;
+  }
+  .nav-links {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+    background-color: var(--secondaryColor);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    display: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .resume {
+    display: none;
+  }
+
+  .profile-name,
+  .hamburger {
+    margin: auto 0;
+    text-align: center;
+    display: block;
+    padding: 0 auto;
+}
+
+  .nav-links li {
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .profile img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .profile-name,
+  .hamburger {
+    margin: auto 0;
+    text-align: center;
+    display: block;
+    padding: 0 auto;
+    font-size: 1.2rem;
+  }
+}
