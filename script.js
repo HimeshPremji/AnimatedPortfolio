@@ -54,8 +54,8 @@ tl.fromTo(
   {
     height: 0,
     transformOrigin: "top",
-    stagger: 0.06,
-    duration: 1.4,
+    stagger: 0.024,
+    duration: 1.3,
     ease: "power4.inOut",
   }
 )
@@ -90,4 +90,4 @@ tl.fromTo(
   )
   .to(".loader", { autoAlpha: 0 }, "-=0.5");
 
-// Navbar Animation Ends Here
+// Navbar and Loader Animation Ends Here
