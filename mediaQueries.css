@@ -67,18 +67,21 @@
     display: none;
   }
   .home {
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .home-content {
-    padding: 1rem;
+    width: 100%;
+    padding: 1.2rem;
   }
 
   .intro-text {
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
     line-height: 0.9;
-    font-weight: 600;
+  }
+
+  .role {
+    font-size: 1.5rem;
+  }
+  .social-links {
+    justify-content: center;
+    flex-direction: row;
   }
 }
 
@@ -101,10 +104,6 @@
     font-size: 1.2rem;
   }
 
-  .intro-text {
-    font-size: 2rem;
-  }
-
   .role {
     font-size: 1.3rem;
   }
@@ -116,5 +115,22 @@
   .home-btn {
     width: 100%;
     max-width: 300px;
+  }
+  .home {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .intro-text {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .role {
+    font-size: 1.3rem;
+  }
+
+  .social-links {
+    gap: 0.6rem;
   }
 }

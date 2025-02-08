@@ -104,3 +104,46 @@ tl.fromTo(
   .to(".loader", { autoAlpha: 0 }, "-=0.5");
 
 // Navbar and Loader Animation Ends Here
+
+// Home Section Animation
+const tl2 = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+// Background animation
+tl2.from(".home-bg", {
+  duration: 1.5,
+  scale: 0.95,
+  opacity: 0,
+  delay: 0.5,
+});
+
+// Text animations
+tl2
+  .from(
+    ".intro-text",
+    {
+      duration: 1.2,
+      y: 50,
+      opacity: 0,
+      stagger: 0.1,
+    },
+    "-=1"
+  )
+  .from(
+    ".role",
+    {
+      duration: 1,
+      y: 30,
+      opacity: 0,
+    },
+    "-=0.8"
+  )
+  .from(
+    ".social-links a",
+    {
+      duration: 0.8,
+      x: 40,
+      opacity: 0,
+      stagger: 0.15,
+    },
+    "-=0.5"
+  );
