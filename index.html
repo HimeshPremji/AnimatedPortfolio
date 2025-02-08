@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Himesh Premji</title>
+    <title>Himesh Premji - Frontend Developer</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mediaQueries.css" />
     <link rel="stylesheet" href="loader.css" />
     <script src="three.r134.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="vinta.fog.min.js"></script>
+    <!-- Replace YOUR-KIT-ID with actual Font Awesome kit ID -->
     <script
       src="https://kit.fontawesome.com/YOUR-KIT-ID.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
-    <!-- <div class="overlay"></div> -->
     <div class="loader">
       <div class="clips"></div>
       <div class="clips"></div>
@@ -25,131 +26,74 @@
       <div class="clips"></div>
       <div class="clips"></div>
     </div>
+
     <main>
-      <nav class="navbar">
+      <nav class="navbar" aria-label="Main navigation">
         <div class="navbar-bg"></div>
 
         <div class="profile">
           <img
             src="./materials/images/profile.jpeg"
             alt="Himesh Premji's Profile Picture"
+            width="150"
+            height="150"
+            loading="lazy"
           />
         </div>
-        <div class="profile-name">Himesh Premji</div>
-        <button class="hamburger" aria-label="Menu">☰</button>
+        <h1 class="profile-name">Himesh Premji</h1>
+
+        <button
+          class="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
         <ul class="nav-links">
-          <li><a href="#">home</a></li>
-          <li><a href="#">skills</a></li>
-          <li><a href="#">projects</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="resume">RESUME</button>
+
+        <a
+          href="materials/resume/resume.pdf"
+          class="resume"
+          download
+          aria-label="Download resume (PDF)"
+        >
+          Resume
+        </a>
       </nav>
-      <section class="home" aria-label="Introduction">
-        <!-- Background and styling elements -->
-        <div class="home-bg" role="img" aria-hidden="true"></div>
-        <div class="style-div">
-          <div class="style-bg"></div>
-        </div>
 
-        <!-- Primary Home Content -->
+      <section id="home" class="home" aria-labelledby="home-heading">
+        <div class="home-bg" aria-hidden="true"></div>
+        <div class="style-div"><div class="style-bg"></div></div>
+
         <div class="home-content">
-          <h1 class="sr-hidden">Himesh Premji</h1>
-          <p class="intro-text">
-            <span role="text">
-              Hi, I'm <strong>Himesh Premji</strong><br />
-              <span class="role"
-                >Full-Stack Developer & Frontend Freelancer</span
-              ><br />
-              Passionate about building dynamic, responsive, and user-friendly
-              web experiences. I specialize in crafting visually appealing
-              interfaces with modern frameworks like React.js and Tailwind.
-              Currently, I'm expanding my skills in full-stack development while
-              exploring advanced animation libraries to bring more interactivity
-              to web applications. I love transforming ideas into functional,
-              high-performance digital solutions. I'm also open to freelancing
-              opportunities as a frontend developer. If you have a project in
-              mind, let’s collaborate and build something amazing!
-            </span>
+          <h1 class="hero-heading" id="home-heading">
+            I am <span class="highlight">Frontend Developer</span><br />
+            Himesh Premji
+          </h1>
+
+          <p class="intro-p">
+            Passionate about building dynamic, responsive, and user-friendly web
+            experiences. I specialize in crafting visually appealing interfaces
+            with modern frameworks like React.js and Tailwind. Currently, I'm
+            expanding my skills in full-stack development while exploring
+            advanced animation libraries to bring more interactivity to web
+            applications. I love transforming ideas into functional,
+            high-performance digital solutions. I'm also open to freelancing
+            opportunities as a frontend developer. If you have a project in
+            mind, let’s collaborate and build something amazing!
+            <a href="">HIRE ME</a>
           </p>
-          <div class="social-links">
-            <a
-              href="https://github.com/yourgithub"
-              target="_blank"
-              aria-label="GitHub"
-            >
-              <i class="fab fa-github"></i>
-              <span class="sr-hidden">GitHub</span>
-            </a>
-            <a
-              href="https://linkedin.com/in/yourlinkedin"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i class="fab fa-linkedin"></i>
-              <span class="sr-hidden">LinkedIn</span>
-            </a>
-          </div>
-
-          <!-- Additional Home Content -->
-          <div class="home-extra">
-            <!-- Section: What I Do -->
-            <section class="what-i-do">
-              <h2>What I Do</h2>
-              <p>
-                I specialize in creating engaging user interfaces and robust
-                back-end solutions using the latest technologies. My expertise
-                spans responsive design, modern frameworks, and efficient code
-                practices.
-              </p>
-            </section>
-
-            <!-- Section: Featured Projects -->
-            <section class="featured-projects">
-              <h2>Featured Projects</h2>
-              <div class="projects-container">
-                <div class="project-card">
-                  <img
-                    src="./materials/images/project1.jpg"
-                    alt="Project 1 Thumbnail"
-                  />
-                  <h3>Project One</h3>
-                  <p>
-                    A brief description of Project One that highlights its key
-                    features and the technologies used.
-                  </p>
-                  <a href="#" class="project-link">View Project</a>
-                </div>
-                <div class="project-card">
-                  <img
-                    src="./materials/images/project2.jpg"
-                    alt="Project 2 Thumbnail"
-                  />
-                  <h3>Project Two</h3>
-                  <p>
-                    A brief description of Project Two, emphasizing creativity
-                    and innovative solutions.
-                  </p>
-                  <a href="#" class="project-link">View Project</a>
-                </div>
-                <!-- Add more project cards as needed -->
-              </div>
-            </section>
-
-            <!-- Section: My Approach -->
-            <section class="approach">
-              <h2>My Approach</h2>
-              <p>
-                I believe in a collaborative process that values clear
-                communication and iterative design. By understanding your needs,
-                I deliver solutions that not only meet but exceed expectations.
-              </p>
-            </section>
-          </div>
         </div>
       </section>
     </main>
+
     <script src="loader.js"></script>
     <script src="script.js"></script>
     <script src="vinta.js"></script>
