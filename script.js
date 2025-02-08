@@ -106,44 +106,39 @@ tl.fromTo(
 // Navbar and Loader Animation Ends Here
 
 // Home Section Animation
-const tl2 = gsap.timeline({ defaults: { ease: "power4.out" } });
-
-// Background animation
-tl2.from(".home-bg", {
-  duration: 1.5,
-  scale: 0.95,
-  opacity: 0,
-  delay: 0.5,
+const homeTl = gsap.timeline({
+  defaults: {
+    ease: "power4.out",
+    duration: 1.2
+  }
 });
 
-// Text animations
-tl2
-  .from(
-    ".intro-text",
-    {
-      duration: 1.2,
-      y: 50,
-      opacity: 0,
-      stagger: 0.1,
-    },
-    "-=1"
-  )
-  .from(
-    ".role",
-    {
-      duration: 1,
-      y: 30,
-      opacity: 0,
-    },
-    "-=0.8"
-  )
-  .from(
-    ".social-links a",
-    {
-      duration: 0.8,
-      x: 10,
-      opacity: 0,
-      stagger: 0.18,
-    },
-    "-=0.5"
-  );
+homeTl
+  .from(".home-bg", {
+    scale: 0.95,
+    opacity: 0,
+    duration: 1.8
+  })
+  .from(".hero-heading", {
+    y: 60,
+    opacity: 0,
+    stagger: 0.15,
+    duration: 1.4
+  }, "-=1.2")
+  .from(".highlight", {
+    scale: 0.8,
+    opacity: 0,
+    duration: 1,
+    ease: "back.out(3)"
+  }, "-=0.8")
+  .from(".intro-p", {
+    y: 40,
+    opacity: 0,
+    duration: 1.2,
+    stagger: 0.1
+  }, "-=0.5")
+  .from(".intro-p a", {
+    scale: 0.9,
+    opacity: 0,
+    duration: 0.8
+  }, "-=0.3");
