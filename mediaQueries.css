@@ -66,9 +66,15 @@
   .clips:nth-of-type(6) {
     display: none;
   }
+  main {
+    /* margin-top: 5rem; */
+  }
   .home {
     width: 100%;
     padding: 1.2rem;
+  }
+  .home-content {
+    padding: 1rem;
   }
 
   .intro-text {
@@ -109,7 +115,7 @@
   }
 
   .sr-hidden {
-    font-size: 5.2rem;
+    font-size: 4.8rem;
   }
 
   .home-btn {
@@ -117,7 +123,7 @@
     max-width: 300px;
   }
   .home {
-    padding: 1rem;
+    padding: 0.8rem;
     text-align: center;
   }
 

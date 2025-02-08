@@ -141,9 +141,9 @@ tl2
     ".social-links a",
     {
       duration: 0.8,
-      x: 40,
+      x: 10,
       opacity: 0,
-      stagger: 0.15,
+      stagger: 0.18,
     },
     "-=0.5"
   );

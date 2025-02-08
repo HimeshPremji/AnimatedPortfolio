@@ -38,6 +38,7 @@ img {
   object-fit: cover;
 }
 main {
+  /* margin-top: 4.4rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +53,7 @@ main {
   border-radius: 9999px;
   min-width: 20rem;
   width: 90%;
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 0 auto;
   position: relative;
   z-index: 1000;
@@ -124,7 +125,7 @@ main {
   top: 6vh;
   width: 90%;
   margin: 0 auto;
-  max-width: 70rem;
+  max-width: 80rem;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -167,7 +168,7 @@ main {
   background: #e0e0e0;
   position: relative;
 }
-/* 
+
 .style-div {
   height: 6rem;
   width: 100%;
@@ -187,22 +188,23 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-} */
+}
 
 .intro-text {
-  font-size: clamp(2rem, 5vw, 4rem); /* Increased base size */
+  font-size: clamp(2rem, 5vw, 4rem); 
   font-weight: 600;
   line-height: 0;
+  margin: auto;
   margin-bottom: 2rem;
+  max-width: 60rem;
   color: #2d2d2d;
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif; /* System font stack */
-  letter-spacing: 0.02em; /* Slightly tighter spacing */
+  letter-spacing: 0.02em; 
   text-rendering: optimizeLegibility;
 }
 .role {
   display: inline-block;
-  font-size: clamp(1.25rem, 2.8vw, 2rem); /* Increased sizes */
-  font-weight: 500; /* Medium weight */
+  font-size: clamp(1.25rem, 2.8vw, 2rem); 
+  font-weight: 500; 
   color: #4a4a4a;
   margin: 0.75rem 0;
   letter-spacing: -0.01em;
@@ -219,18 +221,18 @@ main {
   color: #f3f3f3;
 }
 
-.social-links a {
+.social-links span {
   text-decoration: none;
   font-size: 1.5rem;
   color: #2d2d2d;
-  transition: color 0.3s ease;
-  -webkit-transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -ms-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
+  transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
 }
 
-.social-links a:hover {
+.social-links span:hover {
   color: #555;
 }
 
@@ -252,4 +254,125 @@ main {
 
 .home-btn:active {
   transform: scale(0.98);
+}
+
+
+/* //////////////////////// */
+
+/* General Section Styling */
+.what-i-do,
+.featured-projects,
+.approach {
+  margin: 4rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.what-i-do h2,
+.featured-projects h2,
+.approach h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.what-i-do p,
+.featured-projects p,
+.approach p {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Featured Projects Section */
+.featured-projects .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: #2d2d2d;
+  margin: 1rem 1rem 0.5rem;
+}
+
+.project-card p {
+  font-size: clamp(0.9rem, 1.25vw, 1rem);
+  color: #4a4a4a;
+  margin: 0 1rem 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem;
+  font-size: clamp(0.9rem, 1.25vw, 1rem);
+  background: #2d2d2d;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: #555;
+}
+
+/* My Approach Section */
+.approach {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-content {
+    padding: 1rem;
+  }
+
+  .what-i-do,
+  .featured-projects,
+  .approach {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+
+  .featured-projects .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
 }
