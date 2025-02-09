@@ -77,7 +77,7 @@ tl.fromTo(
     {
       width: "101%",
       background: "white",
-      duration: 1,
+      duration: 1.1,
       ease: "power2.inOut",
     },
     "-=0.8"
@@ -130,15 +130,15 @@ homeTl
     opacity: 0,
     duration: 1,
     ease: "back.out(3)"
-  }, "-=0.8")
+  }, "-=1")
   .from(".intro-p", {
-    y: 40,
+    y: 30,
     opacity: 0,
     duration: 1.2,
     stagger: 0.1
-  }, "-=0.5")
+  }, "-=0.7")
   .from(".intro-p a", {
     scale: 0.9,
     opacity: 0,
     duration: 0.8
-  }, "-=0.3");
+  }, "-=0.6");
