@@ -109,36 +109,67 @@ tl.fromTo(
 const homeTl = gsap.timeline({
   defaults: {
     ease: "power4.out",
-    duration: 1.2
-  }
+    duration: 1.2,
+  },
 });
 
 homeTl
-  .from(".home-bg", {
-    scale: 0.95,
-    opacity: 0,
-    duration: 1.8
-  })
-  .from(".hero-heading", {
-    y: 60,
-    opacity: 0,
-    stagger: 0.15,
-    duration: 1.4
-  }, "-=1.2")
-  .from(".highlight", {
-    scale: 0.8,
-    opacity: 0,
-    duration: 1,
-    ease: "back.out(3)"
-  }, "-=1")
-  .from(".intro-p", {
-    y: 30,
-    opacity: 0,
-    duration: 1.2,
-    stagger: 0.1
-  }, "-=0.7")
-  .from(".intro-p a", {
-    scale: 0.9,
-    opacity: 0,
-    duration: 0.8
-  }, "-=0.6");
+  .from(
+    ".home-bg",
+    {
+      scale: 0.95,
+      opacity: 0,
+      duration: 1.8,
+    },
+    "+=0.6"
+  )
+  .from(
+    ".hero-heading",
+    {
+      y: 60,
+      opacity: 0,
+      stagger: 0.15,
+      duration: 1.4,
+    },
+    "-=1.2"
+  )
+  .from(
+    ".highlight",
+    {
+      scale: 0.8,
+      opacity: 0,
+      duration: 1,
+      ease: "back.out(3)",
+    },
+    "-=1"
+  )
+  .from(
+    ".intro-p",
+    {
+      y: 30,
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.1,
+    },
+    "-=0.7"
+  )
+  .from(
+    ".intro-p a",
+    {
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.8,
+    },
+    "-=0.6"
+  )
+  .from(
+    ".link-content h2",
+    {
+      x: 40,
+      opacity: 0,
+      stagger: 0.15,
+      duration: 1.2,
+      ease: "power4.out",
+    },
+    "-=0.4"
+  );

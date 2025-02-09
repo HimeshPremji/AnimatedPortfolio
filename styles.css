@@ -184,7 +184,6 @@ main {
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  /* display: flex; */
   padding: 2rem;
   background: #e0e0e0;
   position: relative;
@@ -212,7 +211,7 @@ main {
 }
 
 .highlight {
-  color: var(--primaryColor); /* Use your color variable */
+  color: var(--primaryColor);
   background: linear-gradient(100deg, #111111, #999999c9, #000000, #878787);
   -webkit-background-clip: text;
   background-clip: text;
@@ -252,7 +251,7 @@ main {
 .intro-p a {
   color: #2d2d2d;
   color: rgb(7, 7, 210);
-  font-size: clamp(.9rem, 1.35rem, 1.65rem);
+  font-size: clamp(0.9rem, 1.35rem, 1.65rem);
   margin: 0 0.2rem;
   text-decoration: underline;
   font-weight: 600;
@@ -317,3 +316,58 @@ main {
 }
 
 /* //////////////////////// */
+.link-content {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  background: #e0e0e0;
+  position: relative;
+}
+
+.link-content a {
+  /* width: 100%; */
+  background: red !important;
+  /* height: 100%; */
+}
+.link-content h2 {
+  color: var(--primaryColor);
+  background: linear-gradient(100deg, #111111, #999999c9, #000000, #878787);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  width: 90%;
+  margin: 0.6rem auto;
+}
+
+.arrow {
+  /* -webkit-text-fill-color: #111111; */
+  padding: 0.2rem 0.4rem;
+  text-align: center;
+  display: inline-block;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow svg {
+  width: 1em; 
+  height: 1em; 
+  vertical-align: middle; 
+  stroke: currentColor;
+  stroke-width: 2.5; 
+}
+
+.link-content h2:hover .arrow {
+  transform: rotate(-90deg);
+}

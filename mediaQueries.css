@@ -61,8 +61,12 @@
     width: 95%;
     padding: 1.2rem;
   }
+  .link-content,
   .home-content {
     padding: 1rem;
+  }
+  .link-content h2 {
+    width: 95%;
   }
   .hero-heading {
     width: 95%;
@@ -101,6 +105,9 @@
     text-align: center;
   }
 
+  .link-content h2 {
+    width: 95%;
+  }
   .hero-heading {
     width: 95%;
     margin-bottom: 2.1rem;
