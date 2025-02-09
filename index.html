@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Himesh Premji - Frontend Developer</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mediaQueries.css" />
-    <link rel="stylesheet" href="loader.css" />
-    <script src="three.r134.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="vinta.fog.min.js"></script>
-  </head>
+    <link rel="stylesheet" href="./src/styles/output.css" />
+    <link rel="stylesheet" href="./src/styles/input.css" />
+    <link rel="stylesheet" href="./src/styles/loader.css" />
 
-  <body>
+    <script src="./src/scripts/three.r134.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="./src/scripts/vinta.fog.min.js"></script>
+  </head>
+  <body class="bg-[#111111] text-[#efefef] font-[Neue-MontReal]">
     <div class="loader">
       <div class="clips"></div>
       <div class="clips"></div>
@@ -22,57 +22,129 @@
       <div class="clips"></div>
     </div>
 
-    <main>
-      <nav class="navbar" aria-label="Main navigation">
-        <div class="navbar-bg"></div>
+    <main class="flex flex-col items-center w-full min-h-[80vh]">
+      <!-- Navbar -->
+      <nav
+        class="navbar relative z-[1000] top-[1.3rem] w-[95%] md:w-[90%] max-w-[102rem] mx-auto p-3 px-6 md:px-[2.5rem] flex items-center justify-between rounded-full"
+      >
+        <!-- Navbar background (for animations if needed) -->
+        <div
+          class="navbar-bg absolute top-0 left-0 w-0 h-full bg-black z-[-1] rounded-full"
+        ></div>
 
-        <div class="profile">
+        <!-- Profile image -->
+        <div class="profile relative z-10">
           <img
-            src="./materials/images/profile.jpeg"
+            src="./src/images/profile.jpeg"
             alt="Himesh Premji's Profile Picture"
             width="150"
             height="150"
-            loading="lazy"
+            class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover"
           />
         </div>
-        <h1 class="profile-name">Himesh Premji</h1>
+
+        <h1 class="profile-name block md:hidden text-lg relative z-10">
+          Himesh Premji
+        </h1>
 
         <button
-          class="hamburger"
+          class="hamburger block md:hidden text-2xl relative z-10"
           aria-label="Toggle navigation menu"
           aria-expanded="false"
         >
           ☰
         </button>
 
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <!-- Navigation links -->
+        <!-- On mobile these are positioned absolutely and hidden by default.
+             In your JS you can toggle a class (like “active”) to change from hidden to flex -->
+        <ul
+          class="nav-links absolute top-[120%] left-0 right-0 bg-[#efefef] flex-col items-center p-4 rounded-xl shadow-lg hidden md:static md:flex md:flex-row md:bg-transparent md:shadow-none md:p-0 gap-5 list-none m-0 overflow-hidden"
+        >
+          <li class="w-full text-center py-2 md:py-0">
+            <a href="#home" class="font-bold text-base uppercase text-black"
+              >Home</a
+            >
+          </li>
+          <li class="w-full text-center py-2 md:py-0">
+            <a href="#skills" class="font-bold text-base uppercase text-black"
+              >Skills</a
+            >
+          </li>
+          <li class="w-full text-center py-2 md:py-0">
+            <a href="#projects" class="font-bold text-base uppercase text-black"
+              >Projects</a
+            >
+          </li>
+          <li class="w-full text-center py-2 md:py-0">
+            <a href="#about" class="font-bold text-base uppercase text-black"
+              >About</a
+            >
+          </li>
+          <li class="w-full text-center py-2 md:py-0">
+            <a href="#contact" class="font-bold text-base uppercase text-black"
+              >Contact</a
+            >
+          </li>
         </ul>
 
+        <!-- Resume link (desktop only) -->
         <a
-          href="materials/resume/resume.pdf"
-          class="resume"
+          href="./src/resume/resume.pdf"
           download
           aria-label="Download resume (PDF)"
-          >Resume
-        </a>
+          class="resume hidden md:block bg-[#111111] text-[#efefef] rounded-full py-2 px-6 text-center text-sm font-semibold uppercase text-center relative z-10 hover:bg-[#3d3d3d]"
+          >Resume</a
+        >
       </nav>
 
-      <section id="home" class="home" aria-labelledby="home-heading">
-        <div class="home-bg" aria-hidden="true"></div>
-        <div class="style-div"><div class="style-bg"></div></div>
+      <!-- Home Section -->
+      <section
+        id="home"
+        class="home relative top-[6vh] w-[95%] md:w-[90%] mx-auto max-w-[102rem] flex flex-col items-center justify-center p-5 md:p-8 overflow-hidden rounded-lg text-left"
+        aria-labelledby="home-heading"
+      >
+        <!-- Background layers -->
+        <div
+          class="home-bg absolute top-0 left-0 w-full h-full bg-[#e0e0e0] z-[-1]"
+        >
+          <!-- Gradient overlay (using Tailwind’s gradient utilities) -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-[rgba(236,236,236,0.9)] to-[rgba(226,226,226,0.85)]"
+          ></div>
+        </div>
 
-        <div class="home-content">
-          <h1 class="hero-heading" id="home-heading">
-            I am <span class="highlight">Frontend Developer</span><br />
+        <div
+          class="style-div relative h-24 w-full flex flex-col items-center justify-center text-center overflow-hidden rounded-t-[0.6rem]"
+        >
+          <div class="style-bg absolute top-0 left-0 w-full h-full"></div>
+        </div>
+
+        <!-- Home content -->
+        <div
+          class="home-content relative mx-auto h-full w-full p-5 md:p-8 bg-[#e0e0e0]"
+        >
+          <h1
+            id="home-heading"
+            class="hero-heading font-extrabold uppercase text-[#2d2d2d] leading-tight w-[95%] md:w-[90%] mx-auto mt-8 mb-8"
+            style="font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.01em"
+          >
+            I am
+            <span
+              class="highlight italic bg-gradient-to-r from-[#111111] via-[#999999c9] to-[#878787] bg-clip-text text-transparent"
+              style="font-size: clamp(1.5rem, 3vw, 2.5rem)"
+              >Frontend Developer</span
+            ><br />
             Himesh Premji
           </h1>
 
-          <p class="intro-p">
+          <p
+            class="intro-p w-[95%] md:w-[90%] mx-auto mb-8 text-left leading-relaxed text-[#2d2d2d] font-inter"
+            style="
+              font-size: clamp(0.875rem, 1.3rem, 1.6rem);
+              letter-spacing: 0.02em;
+            "
+          >
             Passionate about building dynamic, responsive, and user-friendly web
             experiences. I specialize in crafting visually appealing interfaces
             with modern frameworks like React.js and Tailwind. Currently, I'm
@@ -82,16 +154,47 @@
             high-performance digital solutions. I'm also open to freelancing
             opportunities as a frontend developer. If you have a project in
             mind, let’s collaborate and build something amazing!
-            <a href="">HIRE ME</a>
+            <a
+              href=""
+              class="underline font-semibold text-[rgb(7,7,210)] transition-colors duration-200"
+              style="
+                font-size: clamp(0.9rem, 1.35rem, 1.65rem);
+                margin: 0 0.2rem;
+              "
+              >HIRE ME</a
+            >
           </p>
         </div>
 
-        <div class="link-content">
-          <a href="#">
-            <h2>
-              Projects Here
-              <span class="arrow"
-                ><svg
+        <!-- Link content -->
+        <div
+          class="link-content relative mx-auto h-full w-full px-8 bg-[#e0e0e0]"
+        >
+          <div class="link-container w-[90%] my-[0.6rem] mx-auto">
+            <a href="#" class="inline-flex flex-nowrap group">
+              <h2
+                class="text-[#111111] italic font-extrabold uppercase leading-tight inline-block"
+                style="
+                  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+                  background: linear-gradient(
+                    100deg,
+                    #111111,
+                    #474646c9,
+                    #000000,
+                    #505050
+                  );
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              >
+                Projects Here
+              </h2>
+              <span
+                class="arrow inline-block p-[0.2rem] px-[0.4rem] text-center transition-transform duration-300 ease-linear group-hover:rotate-[-90deg]"
+                style="font-size: clamp(1.8rem, 3.5vw, 2.8rem)"
+              >
+                <svg
                   width="30"
                   height="30"
                   viewBox="0 0 24 24"
@@ -100,16 +203,36 @@
                   stroke-width="3"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  class="w-[1em] h-[1em] align-middle"
                 >
-                  <path d="M5 12h14M12 5l7 7-7 7" /></svg
-              ></span>
-            </h2>
-          </a>
-          <a href="#">
-            <h2>
-              Hire Me
-              <span class="arrow"
-                ><svg
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+            </a>
+            <a href="#" class="inline-flex flex-nowrap group mt-4">
+              <h2
+                class="text-[#111111] italic font-extrabold uppercase leading-tight inline-block"
+                style="
+                  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+                  background: linear-gradient(
+                    100deg,
+                    #111111,
+                    #474646c9,
+                    #000000,
+                    #505050
+                  );
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+              >
+                Hire Me
+              </h2>
+              <span
+                class="arrow inline-block p-[0.2rem] px-[0.4rem] text-center transition-transform duration-300 ease-linear group-hover:rotate-[-90deg]"
+                style="font-size: clamp(1.8rem, 3.5vw, 2.8rem)"
+              >
+                <svg
                   width="30"
                   height="30"
                   viewBox="0 0 24 24"
@@ -118,17 +241,20 @@
                   stroke-width="3"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  class="w-[1em] h-[1em] align-middle"
                 >
-                  <path d="M5 12h14M12 5l7 7-7 7" /></svg
-              ></span>
-            </h2>
-          </a>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <script src="loader.js"></script>
-    <script src="script.js"></script>
-    <script src="vinta.js"></script>
+    <!-- Scripts (these remain as you had them) -->
+    <script src="./src/scripts/loader.js"></script>
+    <script src="./src/scripts/script.js"></script>
+    <script src="./src/scripts/vinta.js"></script>
   </body>
 </html>

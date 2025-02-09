@@ -325,14 +325,18 @@ main {
   position: relative;
 }
 
+.link-container {
+  width: 90%;
+  margin: 0.6rem auto;
+}
 .link-content a {
-  /* width: 100%; */
-  background: red !important;
-  /* height: 100%; */
+  width: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .link-content h2 {
   color: var(--primaryColor);
-  background: linear-gradient(100deg, #111111, #999999c9, #000000, #878787);
+  background: linear-gradient(100deg, #111111, #474646c9, #000000, #505050);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -343,31 +347,43 @@ main {
   text-transform: uppercase;
   line-height: 1.2;
   text-align: left;
-  width: 90%;
-  margin: 0.6rem auto;
+  width: fit-content;
 }
 
 .arrow {
-  /* -webkit-text-fill-color: #111111; */
   padding: 0.2rem 0.4rem;
   text-align: center;
   display: inline-block;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
-  -ms-transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .arrow svg {
-  width: 1em; 
-  height: 1em; 
-  vertical-align: middle; 
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
   stroke: currentColor;
-  stroke-width: 2.5; 
+  stroke-width: 2.5;
 }
 
 .link-content h2:hover .arrow {
   transform: rotate(-90deg);
 }
+
+.aDiv {
+  height: 36rem;
+  margin: 0 auto;
+  background: cornsilk;
+  border-radius: 9px;
+  overflow: hidden;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+
+
